@@ -1,7 +1,9 @@
 version: "3.5"
+
 networks:
   monitoring:
     name: monitoring
+
 services:
   prometheus:
     container_name: prometheus
@@ -29,7 +31,7 @@ services:
       - /var/run:/var/run:rw
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
-    device:
+    devices:
       - /dev/kmsg
     privileged: true
     networks:
