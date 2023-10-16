@@ -8,7 +8,7 @@ rule_files:
 scrape_configs:
   - job_name: 'SAGAN-windows'
     static_configs:
-      - targets: ['localhost:9182']
+      - targets: ['192.168.1.27:9182']
   - job_name: 'SAGAN-docker'
     static_configs:
-      - targets: ['cadvisor:8285']
+      - targets: ['localhost:8285']
