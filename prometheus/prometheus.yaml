@@ -11,4 +11,4 @@ scrape_configs:
       - targets: ['192.168.1.27:9182']
   - job_name: 'SAGAN-docker'
     static_configs:
-      - targets: ['cadvisor:8285']
+      - targets: ['cadvisor:8080']
