@@ -45,5 +45,7 @@ services:
     image: grafana/grafana:latest
     restart: unless-stopped
     user: 1000:1000
+    ports: 
+      - 3000:3000
     volumes: 
       - ~/monitoring/grafana/data:/var/lib/grafana
