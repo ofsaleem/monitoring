@@ -49,3 +49,5 @@ services:
       - 3000:3000
     volumes: 
       - ~/monitoring/grafana/data:/var/lib/grafana
+    networks:
+      - monitoring
