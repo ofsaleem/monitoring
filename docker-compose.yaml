@@ -31,6 +31,7 @@ services:
       - /var/run:/var/run:rw
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
+      - /mnt/windows_docker:/rootfs/var/lib/docker:ro
     devices:
       - /dev/kmsg
     privileged: true
