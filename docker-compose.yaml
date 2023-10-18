@@ -30,6 +30,7 @@ services:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
       - /sys:/sys:ro
+      - /dev/disk:/dev/disk:ro
       - /var/lib/docker:/var/lib/docker:ro
       - /etc/machine-id:/etc/machine-id:ro
       - /mnt/windows_docker:/rootfs/var/lib/docker:ro
