@@ -22,7 +22,7 @@ services:
 
   cadvisor:
     container_name: cadvisor
-    image: gcr.io/cadvisor/cadvisor:latest
+    image: google/cadvisor:latest
     restart: unless-stopped
     ports: 
       - 8285:8080
@@ -39,3 +39,10 @@ services:
     privileged: true
     networks:
       - monitoring
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    volumes: 
+      - ~/monitoring/grafana/data:/var/lib/grafana
